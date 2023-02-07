@@ -1,0 +1,22 @@
+<div>
+  <table>
+      <thead>
+      <tr>
+        <th>#</th>
+        <th>concept ID</th>
+        <th>FSN</th>
+        <th>Term</th>
+        <th>Language</th>
+        <th>SNOMED-CT</th>
+      </tr>
+    </thead>
+      <tr *ngFor="let SNOMED_API_RESPONSE of calls, let i=index">
+        <td>{{i+1}}</td>
+        <td>{{SNOMED_API_RESPONSE.conceptID}}</td>
+        <td>{{SNOMED_API_RESPONSE.title || 'No info' }}</td>
+        <td>{{SNOMED_API_RESPONSE.author || 'No info' }}</td>
+        <td>{{SNOMED_API_RESPONSE.isbn || 'No info' }}</td>
+        <td>{{SNOMED_API_RESPONSE.available || 'Not available'}} </td>
+      </tr>
+    </table>
+</div>
